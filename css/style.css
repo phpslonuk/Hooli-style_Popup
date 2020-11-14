@@ -61,7 +61,7 @@ a {
 
 .popup_icon {
   display: block;
-  background: url(../popup-icons/popup-button.png) no-repeat;
+  background: url(https://raw.githubusercontent.com/phpslonuk/Hooli-style_Popup/main/popup-icons/popup-button.png) no-repeat;
   background-position: left center;
   background-size: auto 100%;
   width: 26px;
