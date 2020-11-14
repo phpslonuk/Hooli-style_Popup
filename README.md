@@ -2,5 +2,5 @@
 task for kottans
 
 
-It looks like this
+DEMO
 https://phpslonuk.github.io/Hooli-style_Popup
