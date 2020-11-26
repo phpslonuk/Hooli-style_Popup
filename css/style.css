@@ -9,7 +9,7 @@
   margin: 0 auto;
 }
 
-header {
+.header {
   width: 100%;
   height: 50px;
   display: flex;
@@ -29,49 +29,54 @@ a {
   right: 100px;
 }
 
-.nav_list {
+.nav-list {
   list-style: none;
   display: flex;
 }
 
-.nav_item {
+.nav-item {
   margin: 10px;
 }
 
-.nav_item label{
+.nav-item label{
 	cursor: pointer;
 }
 
-.nav_item:hover {
+.nav-item:hover {
   outline-style: none;
   border-color: gray;
 }
 
-.nav_item_link {
+.nav-item-mail:focus, .nav-item-images:focus, .nav-item-checker:focus + label,
+.nav-item-bell:focus, .nav-item-avatar:focus {
+  outline: solid thin blue;
+}
+
+.nav-item-link {
   padding-top: 5px;
 }
 
-.nav_item_mail, .nav_item_images {
+.nav-item-mail, .nav-item-images {
   font-size: 17px;
   text-decoration: none;
   color: #767676;
 }
 
-.nav_item_img {
+.nav-item-img {
   width: 20px;
   height: 20px;
   margin-top: 3px;
   border-radius: 10px;
 }
 
-#trigger {
+.nav-item-checker {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   position: absolute;
 }
 
-.popup_icon {
+.popup-icon {
   display: block;
   background: url(https://raw.githubusercontent.com/phpslonuk/Hooli-style_Popup/main/popup-icons/popup-button.png) no-repeat;
   background-position: left center;
@@ -82,17 +87,17 @@ a {
 
 /* Check for correctness of work */
 
-input[type="checkbox"]:checked+.popup_icon {
+input[type="checkbox"]:checked+.popup-icon {
   border: 1px solid blue;
 }
 
-input[type="checkbox"]:checked~.popup_menu {
+input[type="checkbox"]:checked~.popup-menu {
   display: block;
 }
 
 /* Popup menu */
 
-.popup_menu {
+.popup-menu {
   display: none;
   border: 1px solid black;
   width: 310px;
@@ -102,7 +107,7 @@ input[type="checkbox"]:checked~.popup_menu {
   right: 10px;
 }
 
-.popup_menu::before {
+.popup-menu::before {
   content: '';
   position: absolute;
   width: 0;
@@ -115,7 +120,7 @@ input[type="checkbox"]:checked~.popup_menu {
   left: 198px;
 }
 
-.popup_menu::after {
+.popup-menu::after {
   content: '';
   position: absolute;
   width: 0;
@@ -178,12 +183,12 @@ input[type="checkbox"]:checked~.popup_menu {
   object-fit: cover;
 }
 
-.show-more_btn {
+.show-more-btn {
   opacity: 0;
   position: absolute;
 }
 
-.show-more:hover, .show-more_btn:focus+.show-more {
+.show-more:hover, .show-more-btn:focus+.show-more {
   color: white;
   background-color: #ebe2da;
   cursor: pointer;
@@ -197,12 +202,12 @@ input[type="checkbox"]:checked~.popup_menu {
   background-color: #ebe2da;
 }
 
-.show-more_btn:checked~.sub-menu {
+.show-more-btn:checked~.sub-menu {
   display: flex;
   border-top: 1px solid #ebe2da;
 }
 
-.show-more_btn:checked+.show-more {
+.show-more-btn:checked+.show-more {
   display: none;
 }
 
